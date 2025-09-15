@@ -13,16 +13,16 @@
       "createdAt": "2025-04-27T10:00:00.000Z"
     },
     {
-      "id": "2",
       "title": "Local Farm Box Subscription",
       "summary": "Weekly produce delivery from nearby farms.",
       "description": "A subscription box service connecting local farmers with urban dwellers looking for fresh produce. Customers receive a curated box each week containing fruits, vegetables, and artisanal goods sourced directly from nearby growers. It encourages local commerce, healthy eating, and seasonal variety.",
       "tags": [
         "subscription",
         "local",
-        "marketplace"
+        "marketplace",
+        "home"
       ],
-      "createdAt": "2025-04-28T14:30:00.000Z"
+      "id": "2"
     },
     {
       "id": "3",
