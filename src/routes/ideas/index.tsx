@@ -27,14 +27,19 @@ export const Route = createFileRoute('/ideas/')({
 
 function IdeasPage() {
   const { data } = useSuspenseQuery(ideaQueryOptions());
-  const ideas = [...data].sort((a: Idea, b: Idea) => b.createdAt.localeCompare(a.createdAt));
+
+  const ideas = [...data].sort((a: Idea, b: Idea) => {
+    const dataA = a.createdAt ?? '';
+    const dataB = b.createdAt ?? '';
+    return dataB.localeCompare(dataA);
+  });
 
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Ideas</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {ideas.map((idea) => (
-          <IdeaCard idea={idea} />
+          <IdeaCard key={idea._id} idea={idea} />
         ))}
       </div>
     </div>
